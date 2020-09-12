@@ -2,6 +2,7 @@
 
 * 系统环境配置
 
+
 >这是我实验过的系统配置
 
 | 标题        | 内容           | 说明  |
@@ -37,4 +38,10 @@
  |下载u-boot|git clone https://github.com/Lichee-Pi/u-boot.git -b v3s-current --depth 1|这里我只clone最新一版|
  |下载licheepi的linux内核|git clone https://github.com/Lichee-Pi/linux.git --depth 1|同样我只下载最后一版|
  |下载buildroot|wget https://buildroot.org/downloads/buildroot-2017.08.tar.gz||
- |解压buildroot|||
+ |解压buildroot|wget https://buildroot.org/downloads/buildroot-2017.08.tar.gz||
+ |||上述完成u-boot, linux内核, buildroot|
+ ||||
+|创建u-boot|tar -czf u-boot.tar.gz u-boot/||
+|创建linux内核备份|tar -czf linux.tar.gz linux/||
+|||创建备份是我的习惯，因为github下载速度太慢了|
+
