@@ -34,5 +34,7 @@
  |设置环境变量|echo "LD_LIBRARY_PATH=/opt/develop/gcc-linaro-7.5.0-2019.12-rc1-x86_64_arm-linux-gnueabihf/lib" >> /etc/profile|我这里LD_LIBRARY_PATH是首次定义，所以直接赋值，如果你不是首次使用，这里要把原来的值加上，像这样old=$old:new|
  |退出root|||
  |进入licheepi实验目录|我的是~/esd/licheepi/||
- |创建两个文件夹|mkdir buildroot, mkdir linux|u-boot不需要创建新的文件夹|
  |下载u-boot|git clone https://github.com/Lichee-Pi/u-boot.git -b v3s-current --depth 1|这里我只clone最新一版|
+ |下载licheepi的linux内核|git clone https://github.com/Lichee-Pi/linux.git --depth 1|同样我只下载最后一版|
+ |下载buildroot|wget https://buildroot.org/downloads/buildroot-2017.08.tar.gz||
+ |解压buildroot|||
