@@ -38,7 +38,7 @@
  |下载u-boot|git clone https://github.com/Lichee-Pi/u-boot.git -b v3s-current --depth 1|这里我只clone最新一版|
  |下载licheepi的linux内核|git clone https://github.com/Lichee-Pi/linux.git --depth 1|同样我只下载最后一版|
  |下载buildroot|wget https://buildroot.org/downloads/buildroot-2017.08.tar.gz||
- |解压buildroot|wget https://buildroot.org/downloads/buildroot-2017.08.tar.gz||
+ |解压buildroot|tar -xvf https://buildroot.org/downloads/buildroot-2017.08.tar.gz||
  |||上述完成u-boot, linux内核, buildroot|
 |创建u-boot|tar -czf u-boot.tar.gz u-boot/||
 |创建linux内核备份|tar -czf linux.tar.gz linux/||
@@ -69,5 +69,9 @@
 ||**System banner------> Welcome to lizhi host.**||
 ||**Root password------> your passwd**||
 ||**Run a getty (login prompt) after boot/TTY Port由原来的console调整为ttyS0, Baudrate由原来的keep kernel default调整为115200**||
-||**在Target Options里配置一下Target Architecture为Arm(little endian)       #这一项必须配置**||
-
+||**在Target Options里配置一下**||
+||**arget Architecture为Arm(little endian)**|必须配置|
+|硬浮点需要配置的|**Enable VFP extension support**||
+|硬浮点需要配置的|**Target ABI (EABIhf)**||
+|安装依赖程序|flex, bison, patch, cpio|sudo pacman -S flex|
+|make|make需要下载，所以打开网，make时间略长|make成功后会在当前目录找到output/images/rootfs.tar|
