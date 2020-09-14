@@ -1,20 +1,14 @@
 # esd->Embeded software develop
 
-## 嵌入式软件开发仓库
+## 分享我的嵌入式软件开发历程
 
-* 1.licheepi     [help](www.baidu.com)
-
+* 1.licheepi     
+>荔枝派相关
 * 2.HiSilicon
-
-this is a pic![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon32.png "Logo Title Text 1")
-
-```c
-this test 
-```
+>华为海思相关
 
 
-Markdown | Less | Pretty
---- | --- | ---
-*Still* | `renders` | **nicely**
+
+
 
 
