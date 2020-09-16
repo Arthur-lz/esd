@@ -75,3 +75,4 @@
 |硬浮点需要配置的|**Target ABI (EABIhf)**||
 |安装依赖程序|flex, bison, patch, cpio|sudo pacman -S flex|
 |make|make需要下载，所以打开网，make时间略长|make成功后会在当前目录找到output/images/rootfs.tar|
+|安装qemu|我是下载源码安装|在manjaro上直接sudo pacman -S qemu安装后没有qemu可执行文件，只在usr/lib, share目录下有一个库文件，原因不明。源码安装时，需要安装pkg-config, 之后就可以正常执行./configure生成Makefile了，|
