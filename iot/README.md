@@ -42,7 +42,28 @@
 
 #### qemu运行内核
 * arm内核
-> qemu-system-arm -M vexpress-a9 -smp 2 -kernel arch/arm/boot/zImage -append "console=ttyAMA0 rdinit=linuxrc" -nographic -dtb arch/arm/boot/dts/vexpress-v2p-ca9.dtb -m 1024M 
+> qemu-system-arm -M vexpress-a9 -smp 2 -kernel arch/arm/boot/zImage -append "console=ttyAMA0 rdinit=linuxrc" -nographic -dtb arch/arm/boot/dts/vexpress-v2p-ca9.dtb -m 1024M -S -s
+
+#### gdb 调试
+* 1.安装arm-linux-gdb
+> 下载gdb源码：wget http://ftp.gnu.org/gnu/gdb/gdb-7.7.tar.gz
+
+> 配置gdb: ./configure -target=arm-linux -enable-sim -prefix=/opt/arm-gdb
+
+> make
+
+> make install
+
+> 目录/opt/arm-gdb/bin 下会安装arm-linux-gdb
+
+> export PATH=$PATH:/opt/arm-gdb/bin
+
+* 2. 进入linux内核源码目录后执行
+> arm-linux-gdb --tui vmlinux
+
+> 进入gdb后，回车
+
+> 连接已经运行的linux arm 内核：target remote localhost:1234
 
 ## 龙芯
 
